@@ -1,0 +1,81 @@
+.subheader {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: #8D77AB; /*#9b7396; /* #D69B8B: try this as well */
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* Slight background for visibility */
+  padding: 6px;
+}
+.subheader-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.subheader-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subheader-social,
+.subheader-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 10px;
+  font-size: 12px;
+}
+.instagram,
+.whatsapp,
+.youtube {
+  background-image: url('../../assets/instagram_trans.png'); /* Your Instagram background image */
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  display: inline-block;
+}
+.whatsapp {
+  background-image: url('../../assets/whatsapp_trans.png'); /* Your Facebook background image */
+}
+.youtube {
+  background-image: url('../../assets/youtube_trans.png'); /* Your Facebook background image */
+}
+
+.border-bottom {
+  color: #fff; /* Base color for links */
+  text-decoration: none;
+  padding: 2px 0;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease; /* Adds smooth transition for hover effect */
+}
+
+/* Hover effect: Animated Bottom border */
+.border-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease; /* Smooth transition of the border */
+}
+
+.border-bottom:hover::after {
+  width: 100%; /* Expands to full width on hover */
+}
+
+.border-bottom.active-link {
+  border-bottom: 2px solid #fff; /* Wider border for active state */
+}
